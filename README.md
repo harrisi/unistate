@@ -1,21 +1,20 @@
 # Uniwhat
 
-**TODO: Add description**
+testing state in unifex
 
-## Installation
+## Use
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `uniwhat` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:uniwhat, "~> 0.1.0"}
-  ]
-end
+```sh
+$ git clone https://github.com/harrisi/unistate
+$ cd unistate
+$ mix deps.get
+$ iex -S mix
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/uniwhat>.
-
+```elixir
+iex(1)> {:ok, state} = Uniwhat.init()
+{:ok, #Reference<0.1243177624.2685009926.61832>}
+iex(2)> Uniwhat.do_work_on_state(state)
+state->data = foo
+                 {:ok, #Reference<0.1243177624.2685009926.61832>}
+```
